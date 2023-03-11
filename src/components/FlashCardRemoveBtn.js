@@ -1,11 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 export const FlashCardRemoveBtn = (props) => {
-    let {handlerDeleteCard, cardsList, pos} = props;
-    let temp = 0;
-    useEffect(() => {
-        temp +=1;
-    }, [cardsList]);
+    let {handlerDeleteCard, pos} = props;
     return(
         <svg className = "remove-btn" onClick={() => {
             handlerDeleteCard(pos);

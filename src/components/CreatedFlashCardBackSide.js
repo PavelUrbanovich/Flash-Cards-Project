@@ -3,7 +3,7 @@ import { FlashCardRemoveBtn } from './FlashCardRemoveBtn';
 import { FlashCardImg } from './FlashCardImg';
 
 export const CreatedFlashCardBackSide = (props) => {
-    let {meaningsListBack, cardsList} = props;
+    let {backSideMeaningsList, cardsList} = props;
     return(
         <div className = {`created-flash-card-back-side  color-back-side-${cardsList.length+1}`}>
             <div className="card-content">
@@ -17,7 +17,7 @@ export const CreatedFlashCardBackSide = (props) => {
                
                 </div> */}
                 <div className="card-txt">
-                    {meaningsListBack}
+                    {/* {backSideMeaningsList} */}
                 </div>
             </div>
         </div>

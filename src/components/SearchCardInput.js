@@ -1,12 +1,12 @@
 import React from 'react';
 
 export const SearchCardInput = (props) => {
-    let {cardsList,testDelete} = props;
+    let {cardsList} = props;
     return(
         <div className = "search-card-input-container">
             <input className = "seacr-card-input-input" placeholder= "Find a flashcard"/>
             <div className="loupe-search-container" onClick={() => {
-                    testDelete();
+                    
                 }}>
                 <svg className = "loupe-search">
                     <symbol id="loupe-search-svg" viewBox="0 0 512 512">

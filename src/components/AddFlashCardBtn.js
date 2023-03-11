@@ -1,4 +1,5 @@
 import React from 'react';
+import { flashCardsDataArray } from '../shared/flashCardsDataArray';
 import { CreatedFlashCard } from './CreatedFlashCard';
 
 export const AddFlashCardBtn = (props) => {
@@ -7,16 +8,23 @@ export const AddFlashCardBtn = (props) => {
     return(
        <div className = "add-flash-card-btn-container">
             <button className = "add-flash-card-btn" onClick={() => {
-                cardAddition(
-                    <CreatedFlashCard  
-                        cardsList={cardsList} 
-                        meaningsList={meaningsList} 
-                        handlerDeleteCard={handlerDeleteCard}
-                        meaningsListBack={meaningsListBack} 
-                        key={cardsList.length+1}
-                        pos={pos} 
-                    />
-                )
+                // cardAddition(
+                //     <CreatedFlashCard  
+                //         cardsList={cardsList} 
+                //         meaningsList={meaningsList} 
+                //         handlerDeleteCard={handlerDeleteCard}
+                //         meaningsListBack={meaningsListBack} 
+                //         key={cardsList.length+1}
+                //         pos={pos} 
+                //     />
+                // )
+                const flashCardData = {
+                    id: cardsList.length,
+                    frontSideMeaningsList: {meaningsList},
+                    backSideMeaningsList: {meaningsListBack}
+                };
+                flashCardsDataArray.unshift(flashCardData);
+                cardAddition(flashCardsDataArray);
                 wipeMeaningList('');
                 wipeMeaningListBack('');
                 const sideOne = document.querySelector('.side-1');
