@@ -9,7 +9,7 @@ import { FlashCardsColor } from './FlashCardsColor';
 import { UpendBtnComponent } from './UpendBtnComponent';
 
 export const CreationFlashCardPopUp = (props) => {
-    let {cardAddition, cardsList, handlerDeleteCard, pos} = props;
+    let {cardAddition, cardsList, handlerDeleteCard, pos, arr2, getArray} = props;
     const [meaningsList, setMeaningsList] = React.useState([]);
     const handleDeleteNameFromMeaningsList = () => setMeaningsList();
     const [meaningsListBack, setMeaningsListBack] = React.useState([]);
@@ -74,7 +74,8 @@ export const CreationFlashCardPopUp = (props) => {
                             <FlashCardsColor 
                                 cardsList={cardsList}
                             />
-                            <AddFlashCardBtn 
+                            <AddFlashCardBtn
+                                getArray={getArray} 
                                 meaningsList={meaningsList} 
                                 cardAddition={cardAddition}
                                 cardsList2={cardsList2} 
@@ -84,6 +85,7 @@ export const CreationFlashCardPopUp = (props) => {
                                 wipeMeaningListBack={wipeMeaningListBack}
                                 handlerDeleteCard={handlerDeleteCard}
                                 pos={pos}
+                                arr2={arr2}
                             />
                         </div>
                 </div>

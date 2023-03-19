@@ -4,45 +4,39 @@ import { PopUpOpenBtn } from './PopUpOpenBtn';
 import { RecycleBin } from './RecycleBin';
 import { SearchCardInput } from './SearchCardInput';
 import { CreatedFlashCard } from './CreatedFlashCard';
+import { flashCardsDataArray } from '../shared/flashCardsDataArray';
 
 export const FlashCardsSection = () => {
     let [cardsList, setCardsList] = useState([]);
-    // let arr = [...cardsList];
-    let arr2;
-    let arr3;
-    let removedItem;
-    const cardAddition = (item) => {
-        // arr.unshift(item);
-        arr2 = item.map((el, pos) => {
+    let flashCardsArray;
+    const flashCardsArrayRender = () => {
+        flashCardsArray = flashCardsDataArray.map((el, pos) => {
             return (
                 <CreatedFlashCard  
                     cardsList={cardsList} 
-                    frontSideMeaningsList={el.frontSideMeaningsList} 
-                    backSideMeaningsList={el.backSideMeaningsList}
+                    frontSideMeaningsList={el.frontSideMeaningsList.meaningsList} 
+                    backSideMeaningsList={el.backSideMeaningsList.meaningsListBack}
                     handlerDeleteCard={handlerDeleteCard} 
                     key={el.id} 
                     pos={pos}
                 />
-            )
-        })
-        // arr3 = [...arr2];
-        setCardsList(arr2);
+            );
+        });
+        setCardsList(flashCardsArray);
     };
-    const handlerDeleteCard = (item1) => {
-        // const arr3 = Object.assign([], arr2);
-        // console.log(arr3)
-        arr2.splice(item1, 1);
-        // removedItem = arr3.splice(item1, 1);
-        setCardsList(arr2);
-        console.log(arr2)
-        
+    const cardAddition = () => {
+        flashCardsArrayRender();
     };
-    
+    const handlerDeleteCard = (item1, item2) => {
+        const removedCard = flashCardsDataArray.splice(item1,1);
+        flashCardsArrayRender();
+    };
+  
     return (
         <section className = "flash-cards-section">
             <div className = "addition-card-block">
                 <PopUpOpenBtn 
-                    cardAddition={cardAddition} 
+                    cardAddition={cardAddition}
                     cardsList={cardsList} 
                     handlerDeleteCard={handlerDeleteCard}
                 />

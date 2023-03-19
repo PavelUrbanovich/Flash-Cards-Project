@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export const CardsBlock = (props) => {
-    let {handlerChangeCards, testCardsList, cardsList} = props;
+    let {handlerChangeCards, testCardsList, cardsList, arr2} = props;
     return (
         // <div className = "cards-block-wrapper">
             <div className = "cards-block" onClick={(event) => {
@@ -58,8 +58,8 @@ export const CardsBlock = (props) => {
                     }}
             }
             }>
-                {/* {props.cardsList} */}
                 {cardsList}
+                {/* {arr2} */}
             </div>
         // </div>
     )

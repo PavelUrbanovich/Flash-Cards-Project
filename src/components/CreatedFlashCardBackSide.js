@@ -17,7 +17,7 @@ export const CreatedFlashCardBackSide = (props) => {
                
                 </div> */}
                 <div className="card-txt">
-                    {/* {backSideMeaningsList} */}
+                    {backSideMeaningsList}
                 </div>
             </div>
         </div>

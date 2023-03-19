@@ -3,8 +3,10 @@ import { flashCardsDataArray } from '../shared/flashCardsDataArray';
 import { CreatedFlashCard } from './CreatedFlashCard';
 
 export const AddFlashCardBtn = (props) => {
-    let {cardAddition, cardsList, meaningsList, meaningsListBack, wipeMeaningList, wipeMeaningListBack, handlerDeleteCard, pos} = props;
-
+    let {cardAddition, getArray, cardsList, meaningsList, meaningsListBack, wipeMeaningList, wipeMeaningListBack, handlerDeleteCard, pos, arr2} = props;
+    // getArray = ((item) => {
+    //     flashCardsDataArray = [...item];
+    // });
     return(
        <div className = "add-flash-card-btn-container">
             <button className = "add-flash-card-btn" onClick={() => {
@@ -18,12 +20,18 @@ export const AddFlashCardBtn = (props) => {
                 //         pos={pos} 
                 //     />
                 // )
+
+
+                
                 const flashCardData = {
                     id: cardsList.length,
                     frontSideMeaningsList: {meaningsList},
                     backSideMeaningsList: {meaningsListBack}
                 };
                 flashCardsDataArray.unshift(flashCardData);
+                //    const getArray = ((item) => {
+                //     flashCardsDataArray = [...item];
+                // });
                 cardAddition(flashCardsDataArray);
                 wipeMeaningList('');
                 wipeMeaningListBack('');

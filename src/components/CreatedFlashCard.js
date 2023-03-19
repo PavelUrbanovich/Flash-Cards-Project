@@ -3,7 +3,7 @@ import { CreatedFlashCardBackSide } from './CreatedFlashCardBackSide';
 import { CreatedFlashCardFrontSide } from './CreatedFlashCardFrontSide';
 
 export const CreatedFlashCard = (props) => {
-    let {frontSideMeaningsList, backSideMeaningsList, cardsList, handlerDeleteCard, pos} = props;
+    let {frontSideMeaningsList, backSideMeaningsList, cardsList, handlerDeleteCard, pos, item} = props;
     return(
         <div className="created-card">
             <CreatedFlashCardFrontSide 
@@ -11,6 +11,7 @@ export const CreatedFlashCard = (props) => {
                 frontSideMeaningsList={frontSideMeaningsList} 
                 cardsList={cardsList}
                 pos={pos}
+                item={item}
             />
             <CreatedFlashCardBackSide 
                 backSideMeaningsList={backSideMeaningsList} 

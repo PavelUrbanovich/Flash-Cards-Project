@@ -2,7 +2,7 @@ import React from 'react';
 import { CreationFlashCardPopUp } from './CreationFlashCardPopUp';
 
 export const PopUpOpenBtn = (props) => {
-    let {cardAddition, cardsList, handlerDeleteCard} = props;
+    let {cardAddition, cardsList, handlerDeleteCard, arr2, getArray} = props;
     return(
         <div>
             
@@ -24,10 +24,12 @@ export const PopUpOpenBtn = (props) => {
             }}>
 
             </div>
-            <CreationFlashCardPopUp 
+            <CreationFlashCardPopUp
+                getArray={getArray} 
                 cardAddition={cardAddition} 
                 cardsList={cardsList} 
                 handlerDeleteCard={handlerDeleteCard}
+                arr2={arr2}
             />
         </div>
     )
