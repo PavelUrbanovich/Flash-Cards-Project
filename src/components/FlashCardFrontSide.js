@@ -12,7 +12,7 @@ export const FlashCardFrontSide = (props) => {
                     </div>
                 </div>
                 <div className = "flash-card-img-container">
-                    <FlashCardImg/>
+                    <button className = "flash-card-chose-img-btn">Choose image</button>
                
                 </div>
                 <div className="card-txt">

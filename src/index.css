@@ -38,7 +38,7 @@ body {
   hyphens: auto;
 }
 [class*="__container"] {
-  max-width: 1600px;
+  min-width: 1600px;
   margin: 0 auto;
   padding: 15px 15px;
 }
@@ -62,7 +62,7 @@ body {
 }
 .header__container {
   display: flex;
-  gap: 60%;
+  gap: 55%;
   background-color: rgb(43, 42, 41);
 }
 .header-title {
@@ -89,25 +89,29 @@ body {
 .logo-draft {
   display: flex;
   cursor: pointer;
+  width: 24%;
+  padding-left: 2%;
 }
 .logo-card-1 {
-  height: 50px;
-  width: 35px;
+  height: 47px;
+  /* width: 35px; */
+  width: 9%;
   /* width: 19%; */
   background-color:#eba555;
   border-radius: 6px;
   transform: rotate(165deg);
 }
 .logo-card-2 {
-  height: 50px;
-  width: 35px;
+  height: 47px;
+  /* width: 35px; */
+  width: 9%;
   /* width: 19%; */
   background-color: #f6ff00;
   border-radius: 6px;
   transform: rotate(15deg);
 }
 .title-container {
-  margin-left: 30px;
+  margin-left: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,11 +238,13 @@ body {
   /* background-color: rgb(121, 116, 116); */
   /* border-radius: 10px; */
   display: flex;
-  gap: 150px;
+  /* gap: 150px; */
+  gap: 8%; 
   justify-content: center;
   align-items: center;
   /* border: rgb(45, 44, 44) solid 5px;
   border-radius: 10px; */
+  padding-left: 4%;
 }
 .addition-btn {
   height: 100px;
@@ -325,7 +331,8 @@ body {
   position: relative;
   background-color: rgb(255 115 38);
   height: 51px;
-  width: 107px;
+  /* width: 107px; */
+  width: 80%;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -365,22 +372,25 @@ body {
 } */
 .cards-block-container {
   position: relative;
-  width: 1400px;
+  /* width: 1400px; */
+  width: 92%;
   margin-top: 70px;
   background-color: #eba555;
   border: 5px solid rgb(50, 50, 50);
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 50%) 5px -8px 10px;
+  margin-right: 4.5%;
 }
 .cards-block-title-container {
   position: absolute;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  top: -46.3px;
-  left: 547px;
+  top: -45.3px;
+  left: 41%;
   background-color:#eba555;
   height: 46px;
-  width: 300px;
+  /* width: 300px; */
+  width: 21%;
   border-top: 5px solid rgb(50, 50, 50);
   border-right: 5px solid rgb(50, 50, 50);
   border-left: 5px solid rgb(50, 50, 50);
@@ -389,19 +399,22 @@ body {
   justify-content: center;
 }
 .cards-block-title {
-  font-size: 30px;
+  font-size: 28px;
   color: #fff;
   font-weight: bold;
-  font-style: italic;
+  font-family: 'Kaisei';
+  font-style: oblique;
 }
 .cards-block {
   /* margin-top: 50px; */
-  /* height: 700px; */
+  height: 500;
+  overflow: hidden;
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(4, 180px);
   grid-template-rows: repeat(8, 180px); */
-  grid-template-columns: repeat(4, 290px);
+  /* grid-template-columns: repeat(4, 290px); */
+  grid-template-columns: repeat(4, 22%);
   grid-template-rows: repeat(5000, 340px);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -409,6 +422,7 @@ body {
   justify-content: center;
   background-color: #eba555;
   padding-top: 40px;
+  padding-bottom: 40px;
   /* border-radius: 10px; */
 }
 
@@ -482,7 +496,8 @@ body {
   position: absolute;
   z-index: 2;
   height: 450px;
-  width: 350px;
+  /* width: 350px; */
+  width: 35%;
   border-radius: 10px;
   padding-left: 10px;
   padding-top: 5px;
@@ -530,7 +545,8 @@ body {
   opacity: 0;
   z-index: 1;
   height: 450px;
-  width: 350px;
+  /* width: 350px; */
+  width: 35%;
   border-radius: 10px;
   padding-left: 10px;
   padding-top: 5px;
@@ -625,13 +641,15 @@ body {
 }
 .pop-up-open-btn {
   height: 52px;
-  width: 210px;
+  width: 111%;
   background-color: rgb(255 115 38);
   border-radius: 10px;
   color: #fff;
   font-size: 24px;
   font-weight: bold;
   box-shadow: rgb(0,0,0,0.5) 6px 6px 6px;
+  font-family: 'Kaisei';
+  font-style: oblique;
 }
 .pop-up-open-btn:active {
   transform: scale(1.1,1.1);
@@ -715,7 +733,8 @@ body {
   border: 3px solid rgb(255 115 38);
   border-radius: 10px;
   height: 35px;
-  width: 420px;
+  /* width: 420px; */
+  width: 263%;
   padding-left: 7px;
   font-weight: 500;
   font-size: 18px;
@@ -724,7 +743,7 @@ body {
   border: 3px solid rgb(255 115 38);
   border-radius: 10px;
   height: 35px;
-  width: 420px;
+  width: 263%;
   padding-left: 7px;
   font-weight: 500;
   font-size: 18px;
@@ -740,7 +759,8 @@ body {
 }
 .creation-flash-card-input-btn {
   height: 40px;
-  width: 120px;
+  /* width: 120px; */
+  width: 66%;
   border-radius: 10px;
   color: white;
   font-weight: bold;
@@ -816,7 +836,8 @@ body {
 }
 .add-flash-card-btn {
   height: 80px;
-  width: 250px;
+  /* width: 250px; */
+  width: 141%;
   background-color: rgb(255 115 38);
   color: white;
   font-size: 30px;
@@ -879,18 +900,22 @@ body {
 .search-card-input-container {
   display: flex;
   position: relative;
+  width: 38%;
 }
 .seacr-card-input-input {
   /* position: relative; */
   height: 48px;
-  width: 580px;
+  width: 108%;
   border-radius: 10px;
   /* border-top-left-radius: 10px;
   border-bottom-left-radius: 10px; */
-  font-size: 21px;
-  padding-left: 15px;
+  font-size: 26px;
+  /* padding-left: 15px; */
+  padding-left: 2%;
   overflow: hidden;
   border: 3px solid orange;
+  font-family: 'Kaisei';
+  font-style: oblique;
 }
 .seacr-card-input-input:focus {
   box-shadow: rgb(0,0,0,0.5) 7px 7px 7px;
@@ -905,7 +930,7 @@ body {
   height: 5%; */
   position: absolute;
   left: 86%;
-  width: 80px;
+  width: 14%;
   height: 48px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -936,29 +961,46 @@ body {
 .menu-list-item-2 {
 }
 .menu-list-href-1 {
-  font-size: 25px;
+  font-size: 27px;
   color: #fff;
   text-decoration: none;
+  font-family: 'Kaisei';
+  font-style: oblique;
+  font-weight: bold;
 }
 .menu-list-href-2 {
-  font-size: 25px;
+  font-size: 27px;
   color: #fff;
   text-decoration: none;
+  font-family: 'Kaisei';
+  font-style: oblique;
+  font-weight: bold;
 }
 .recycle-bin-container {
-
+  width: 23%;
 }
 .recycle-bin-btn {
   height: 52px;
-  width: 210px;
+  /* width: 210px; */
+  width: 60%;
   background-color: rgb(255 115 38);
   border-radius: 10px;
   color: #fff;
   font-size: 24px;
   font-weight: bold;
   box-shadow: rgb(0 0 0 / 50%) 6px 6px 6px;
+  font-family: 'Kaisei';
+  font-style: oblique;
 }
 
 .recycle-bin-btn-txt {
 
+}
+
+.flash-card-chose-img-btn {
+  height: 35px;
+  /* width: 120px; */
+  width: 43%;
+  background-color: #baa9a3;
+  border-radius: 10px;
 }

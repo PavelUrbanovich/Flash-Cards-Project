@@ -27,8 +27,8 @@ export const FlashCardsSection = () => {
     const cardAddition = () => {
         flashCardsArrayRender();
     };
-    const handlerDeleteCard = (item1, item2) => {
-        const removedCard = flashCardsDataArray.splice(item1,1);
+    const handlerDeleteCard = (item) => {
+        const removedCard = flashCardsDataArray.splice(item,1);
         flashCardsArrayRender();
     };
   
@@ -65,7 +65,6 @@ export const FlashCardsSection = () => {
                 </section>
                 <CardsBlock  
                     cardsList={cardsList} 
-                    handlerDeleteCard={handlerDeleteCard}
                 />
             </div>
         </section>

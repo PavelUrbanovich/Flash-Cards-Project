@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
 export const CardsBlock = (props) => {
-    let {handlerChangeCards, testCardsList, cardsList, arr2} = props;
+    let {cardsList} = props;
     return (
-        // <div className = "cards-block-wrapper">
             <div className = "cards-block" onClick={(event) => {
                 let eventss = event.target;
                 let test = document.getElementsByClassName(`${eventss.className}`);
@@ -59,8 +58,6 @@ export const CardsBlock = (props) => {
             }
             }>
                 {cardsList}
-                {/* {arr2} */}
             </div>
-        // </div>
     )
 };

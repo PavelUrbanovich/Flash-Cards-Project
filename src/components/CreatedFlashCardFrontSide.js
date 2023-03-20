@@ -4,6 +4,9 @@ import { FlashCardImg } from './FlashCardImg';
 
 export const CreatedFlashCardFrontSide = (props) => {
     let {frontSideMeaningsList, cardsList, handlerDeleteCard, pos, item} = props;
+    console.log(frontSideMeaningsList)
+    // const ds = frontSideMeaningsList.map((el) => el.className === "creation-front-side" );
+    // console.log(ds)
     return(
         <div className = {`created-flash-card-front-side  color-side-${cardsList.length+1}`}>
             <div className="card-content">
@@ -17,12 +20,15 @@ export const CreatedFlashCardFrontSide = (props) => {
                         />
                     </div>
                 </div>
-                <div className = "flash-card-img-container">
+                {/* <div className = "flash-card-img-container">
                     <FlashCardImg/>
                
-                </div>
+                </div> */}
                 <div className="card-txt">
                     {frontSideMeaningsList}
+
+                    {/* {ds} */}
+
                 </div>
             </div>
         </div>
