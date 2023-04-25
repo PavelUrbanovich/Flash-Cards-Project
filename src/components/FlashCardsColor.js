@@ -1,4 +1,5 @@
 import React from 'react';
+import { flashCardsDataArray } from '../shared/flashCardsDataArray';
 
 export const FlashCardsColor = (props) => {
     let {cardsList} = props;

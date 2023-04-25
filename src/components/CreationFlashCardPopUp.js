@@ -7,6 +7,11 @@ import { CreationBackFlashCardAddTxtBtn } from './CreationBackFlashCardAddTxtBtn
 import { FlashCard } from './FlashCard';
 import { FlashCardsColor } from './FlashCardsColor';
 import { UpendBtnComponent } from './UpendBtnComponent';
+import { frontSideMeaningsArray } from '../shared/frontSideMeaningsArray';
+import { backSideMeaningsArray } from '../shared/backSideMeaningsArray';
+import { CreationFrontTxt } from './CreationFrontTxt';
+import { CreationBackTxt } from './CreationBackTxt';
+import { SelectSubjectMenu } from './SelectSubjectMenu';
 
 export const CreationFlashCardPopUp = (props) => {
     let {cardAddition, cardsList, handlerDeleteCard, pos} = props;
@@ -24,6 +29,40 @@ export const CreationFlashCardPopUp = (props) => {
         setNameBack(nameBack)
     }
     const [cardsList2, setCardsList2] = React.useState([]);
+    const meaningsArrayUpdate = () => {
+        let newMeaningsList = frontSideMeaningsArray.map((el,pos) => {
+            return (
+                <CreationFrontTxt
+                    name={el.name}
+                    key={el.id}
+                    pos={pos}
+                    deleteMeaning={deleteMeaning}
+                />
+            )
+        });
+        setMeaningsList(newMeaningsList);
+    }
+    const backSideMeaningsArrayUpdate = () => {
+        const newBackSideMeaningsList = backSideMeaningsArray.map((el,pos) => {
+            return (
+                <CreationBackTxt
+                    nameBack={el.name}
+                    key={el.id}
+                    pos={pos}
+                    deleteMeaningBack={deleteMeaningBack}
+                />
+            )
+        });
+        setMeaningsListBack(newBackSideMeaningsList);
+    }
+    const deleteMeaning = (item) => {
+        frontSideMeaningsArray.splice(item, 1);
+        meaningsArrayUpdate();
+    }
+    const deleteMeaningBack = (item) => {
+        backSideMeaningsArray.splice(item, 1);
+        backSideMeaningsArrayUpdate();
+    }
     return(
         <div className="creation-flash-card-pop-up">
             <div className = "creation-flash-card-pop-up__close-btn-container">
@@ -56,20 +95,62 @@ export const CreationFlashCardPopUp = (props) => {
                                 name={name}
                             />
                             <CreationFrontFlashCardAddBtn 
-                                changeMeaningsList={item => { setMeaningsList(() => [...meaningsList, item]);}} 
+                                // changeMeaningsList={item => { setMeaningsList(() => [...meaningsList, item]);}} 
+                                changeMeaningsList={(item) => {
+                                    let newMeaning = {
+                                        id: frontSideMeaningsArray.length+1,
+                                        name: item,
+
+                                    };
+                                    frontSideMeaningsArray.push(newMeaning);
+                                    // let newMeaningsList = frontSideMeaningsArray.map((el,pos) => {
+                                    //     return (
+                                    //         <CreationFrontTxt
+                                    //             name={el.name}
+                                    //             key={el.id}
+                                    //             pos={pos}
+                                    //         />
+                                    //     )
+                                    // });
+                                    // setMeaningsList(newMeaningsList);
+                                    meaningsArrayUpdate();
+                                }}
                                 handlerStateChange={handlerStateChange} 
                                 name={name} 
                                 meaningsList={meaningsList}
+                                deleteMeaning={deleteMeaning}
                             />
                             <CreationFlashCardInputBack 
                                 onChange={handlerStateChangeBack} 
                                 nameBack={nameBack}
                             />
                             <CreationBackFlashCardAddTxtBtn 
-                                changeMeaningsListBack={item => { setMeaningsListBack(() => [...meaningsListBack, item]);}} 
+                                changeMeaningsListBack={
+                                    (item) => {
+                                        let newMeaningBack = {
+                                            id: backSideMeaningsArray.length+1,
+                                            name: item,
+    
+                                        };
+                                        backSideMeaningsArray.push(newMeaningBack);
+                                        // let newMeaningsList = frontSideMeaningsArray.map((el,pos) => {
+                                        //     return (
+                                        //         <CreationFrontTxt
+                                        //             name={el.name}
+                                        //             key={el.id}
+                                        //             pos={pos}
+                                        //         />
+                                        //     )
+                                        // });
+                                        // setMeaningsList(newMeaningsList);
+                                        backSideMeaningsArrayUpdate();
+                                }} 
                                 handlerStateChangeBack={handlerStateChangeBack} 
                                 nameBack={nameBack} 
                                 meaningsListBack={meaningsListBack}
+                            />
+                            <SelectSubjectMenu 
+                            
                             />
                             <FlashCardsColor 
                                 cardsList={cardsList}

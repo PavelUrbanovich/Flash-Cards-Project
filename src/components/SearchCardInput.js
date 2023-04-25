@@ -1,4 +1,5 @@
 import React from 'react';
+import { speciesListArray } from '../shared/speciesListArray';
 
 export const SearchCardInput = (props) => {
     let {cardsList} = props;
@@ -6,7 +7,21 @@ export const SearchCardInput = (props) => {
         <div className = "search-card-input-container">
             <input className = "seacr-card-input-input" placeholder= "Find a flashcard"/>
             <div className="loupe-search-container" onClick={() => {
-                    
+                    // const searchCardInput = document.querySelector('.seacr-card-input-input');
+                    // const item = cardsList.filter(el => el.props.frontSideMeaningsList[0].props.name === searchCardInput.value);
+                    // const test = cardsList.map(el => el.props.frontSideMeaningsList[0].props.name === searchCardInput.value);
+                    // const index = test.indexOf(true);
+                    // console.log(test);
+                    // console.log(index);
+                    // console.log(cardsList[index]);
+                    // console.log(cardsList[0].props.frontSideMeaningsList[0].props.name);
+                    console.log(speciesListArray);
+                    // let checkbox = document.querySelectorAll('#checkbox');
+                    // let newCheckbox = Object.entries(checkbox);
+
+                    // let res = newCheckbox.map((el) => el.checked);
+                    // console.log(res);
+
                 }}>
                 <svg className = "loupe-search">
                     <symbol id="loupe-search-svg" viewBox="0 0 512 512">
