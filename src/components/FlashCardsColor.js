@@ -6,7 +6,7 @@ export const FlashCardsColor = (props) => {
     return(
         <div className="flash-card-color-theme">
             <div className="flash-card-color-theme-title">
-                Choose a color for the flashcard
+                Choose a color
             </div>
             <div className="flash-card-color-theme-section">
                 <ul className="color-section-list" onClick={(event) => {

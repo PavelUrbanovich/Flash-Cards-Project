@@ -7,13 +7,21 @@ import { SpecieBtn } from './SpecieBtn';
 import { SpeciesLeftShiftBtn } from './SpeciesLeftShiftBtn';
 import { SpeciesRightShiftBtn } from './SpeciesRightSiftBtn';
 
-export const SpeciesList = () => {
+export const SpeciesList = (props) => {
+    let {setCardsList, flashCardsArray, cardsList, handlerDeleteCard, test5, test7} = props;
     let [test1, test2] = React.useState('');
     let speciesList = speciesListArray.map((el, pos) => {
         return (
             <SpeciesItem
                 key={el.id}
                 itemName={el.name}
+                setCardsList={setCardsList}
+                pos={pos}
+                flashCardsArray={flashCardsArray}
+                cardsList={cardsList}
+                handlerDeleteCard={handlerDeleteCard}
+                test5={test5}
+                test7={test7}
             />
         );
     });
@@ -23,6 +31,13 @@ export const SpeciesList = () => {
                 <SpeciesItem
                     key={el.id}
                     itemName={el.name}
+                    setCardsList={setCardsList}
+                    pos={pos}
+                    flashCardsArray={flashCardsArray}
+                    cardsList={cardsList}
+                    handlerDeleteCard={handlerDeleteCard}
+                    test5={test5}
+                    test7={test7}
                 />
             );
         });

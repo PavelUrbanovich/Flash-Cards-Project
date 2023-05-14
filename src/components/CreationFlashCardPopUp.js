@@ -149,12 +149,14 @@ export const CreationFlashCardPopUp = (props) => {
                                 nameBack={nameBack} 
                                 meaningsListBack={meaningsListBack}
                             />
-                            <SelectSubjectMenu 
-                            
-                            />
-                            <FlashCardsColor 
-                                cardsList={cardsList}
-                            />
+                            <div className = "color-subject-choise">
+                                <SelectSubjectMenu 
+                                
+                                />
+                                <FlashCardsColor 
+                                    cardsList={cardsList}
+                                />
+                            </div>
                             <AddFlashCardBtn
                                 meaningsList={meaningsList} 
                                 cardAddition={cardAddition}

@@ -1,12 +1,19 @@
 import React from 'react';
 import { FlashCardRemoveBtn } from './FlashCardRemoveBtn';
 import { FlashCardImg } from './FlashCardImg';
+import { flashCardsDataArray } from '../shared/flashCardsDataArray';
+import { speciesListArray } from '../shared/speciesListArray';
 
 export const CreatedFlashCardFrontSide = (props) => {
     let {frontSideMeaningsList, cardsList, handlerDeleteCard, pos, item, colorSide} = props;
     console.log(frontSideMeaningsList)
     // const ds = frontSideMeaningsList.map((el) => el.className === "creation-front-side" );
     // console.log(ds)
+    setTimeout(() => {
+        const createdSideOne = document.querySelector(`.color-side-${pos}`);
+        createdSideOne.style.backgroundColor = speciesListArray[0].cardsList[pos].frontSideColor;
+    }, 10);
+ 
     return(
         <div className = {`created-flash-card-front-side  ${colorSide}`}>
             <div className="card-content">

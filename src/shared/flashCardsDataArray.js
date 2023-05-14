@@ -1,7 +1,8 @@
 export let flashCardsDataArray = [
     {
         id: 1,
-        color: 'rgb(114 217 207)',
+        frontSideColor: 'rgb(114 217 207)',
+        backSideColor: 'rgb(114 217 207)',
         frontSideMeaningsList: {
             meaningsList: 'Cat'
         },
@@ -11,7 +12,8 @@ export let flashCardsDataArray = [
     },
     {
         id: 2,
-        color: 'orangered',
+        frontSideColor: 'orange',
+        backSideColor: 'orange',
         frontSideMeaningsList: {
             meaningsList: 'Воспринимать'
         },
@@ -21,7 +23,8 @@ export let flashCardsDataArray = [
     },
     {
         id: 3,
-        color: 'rgb(114 217 207)',
+        frontSideColor: 'yellow',
+        backSideColor: 'yellow',
         frontSideMeaningsList: {
             meaningsList: 'Cat'
         },
