@@ -1,0 +1,38 @@
+.creation-flash-card-input {
+    display: flex;
+    flex-direction: column;
+  }
+  .creation-flash-card-input-container {
+  
+  }
+  .creation-flash-card-input {
+    
+  }
+  .creation-flash-card-input-input {
+    border: 3px solid rgb(255 115 38);
+    border-radius: 10px;
+    height: 35px;
+    /* width: 420px; */
+    width: 263%;
+    padding-left: 7px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .creation-flash-card-input-back {
+    border: 3px solid rgb(255 115 38);
+    border-radius: 10px;
+    height: 35px;
+    width: 263%;
+    padding-left: 7px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .creation-flash-card-input-input:focus {
+    box-shadow: rgb(0,0,0,0.5) 5px 5px 5px;
+  }
+  .creation-flash-card-input-back:focus {
+    box-shadow: rgb(0,0,0,0.5) 5px 5px 5px;
+  }
+  .creation-flash-card-input-btn-container {
+  
+  }

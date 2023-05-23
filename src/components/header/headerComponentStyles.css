@@ -1,0 +1,71 @@
+.header {
+
+}
+.header__container {
+  display: flex;
+  gap: 55%;
+  background-color: #40403e;
+}
+.logo-draft {
+  display: flex;
+  cursor: pointer;
+  width: 24%;
+  padding-left: 2%;
+}
+.logo-card-1 {
+  height: 47px;
+  width: 9%;
+  background-color:#eba555;
+  border-radius: 6px;
+  transform: rotate(165deg);
+  box-shadow: rgb(0,0,0,0.5) 7px 1px 8px;
+}
+.logo-card-2 {
+  height: 47px;
+  width: 9%;
+  background-color: #f6ff00;
+  border-radius: 6px;
+  transform: rotate(15deg);
+  box-shadow: rgb(0,0,0,0.5) 7px 1px 8px;
+}
+.title-container {
+  margin-left: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-title {
+  font-size: 40px;
+  font-weight: bold;
+  font-style:oblique;
+  color: #fff;
+  font-family: 'Kaisei';
+}
+.header-menu-list {
+
+}
+.menu-list-items {
+  display: flex;
+  gap: 57%;
+  align-items: flex-end;
+}
+.menu-list-item-1 {
+}
+.menu-list-item-2 {
+}
+.menu-list-href-1 {
+  font-size: 27px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Kaisei';
+  font-style: oblique;
+  font-weight: bold;
+}
+.menu-list-href-2 {
+  font-size: 27px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Kaisei';
+  font-style: oblique;
+  font-weight: bold;
+}

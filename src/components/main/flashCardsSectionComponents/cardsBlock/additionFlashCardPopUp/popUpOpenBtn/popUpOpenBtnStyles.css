@@ -1,0 +1,41 @@
+.pop-up-open-btn {
+    height: 52px;
+    width: 111%;
+    background-color: rgb(255 115 38);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    /* box-shadow: rgb(0,0,0,0.5) 6px 6px 6px; */
+    box-shadow: rgb(279 165 61) 3px 5px 0px;
+    font-family: 'Kaisei';
+    font-style: oblique;
+  }
+  .pop-up-open-btn:active {
+    transform: scale(1.1,1.1);
+    position: relative;
+  }
+  .creation-flash-card-pop-up {
+    z-index: 10;
+    position: absolute;
+    top: 11%;
+    left: 18%;
+    height: 600px;
+    width: 64%;
+    background-color: rgb(231 231 231);
+    border-radius: 10px;
+    box-shadow: rgb(0,0,0,0.5) 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  .display-eclipse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.5);
+    z-index: 10;
+    /* display: none; */
+  }

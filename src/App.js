@@ -1,12 +1,12 @@
 import React from 'react';
 import './index.css';
-import { HeaderComponent } from './components/HeaderComponent';
-import { MainComponent } from './components/MainComponent';
+import { HeaderComponent } from './components/header/HeaderComponent'
+import { MainComponent } from './components/main/MainComponent';
 
 export const App = () => {
     return (
         <div className = "wrapper">
-            <HeaderComponent initialState = "Hello!" setState = "Bye!"/>
+            <HeaderComponent />
             <MainComponent />
         </div>
     )

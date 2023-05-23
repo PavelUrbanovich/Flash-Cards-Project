@@ -1,0 +1,76 @@
+.flash-cards-section {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .addition-card-block {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    gap: 62%; 
+    justify-content: center;
+    align-items: center;
+    padding-left: 8%;
+  }
+  .cards-block-container {
+    position: relative;
+    width: 92%;
+    margin-top: 6px;
+    background-color: #ffd9ae;
+    border: 5px solid rgb(50, 50, 50);
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 50%) 5px -8px 10px;
+  }
+  .cards-block-title-container {
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    top: -45.3px;
+    left: 41%;
+    background-color: #ffd9ae;
+    height: 46px;
+    width: 21%;
+    border-top: 5px solid rgb(50, 50, 50);
+    border-right: 5px solid rgb(50, 50, 50);
+    border-left: 5px solid rgb(50, 50, 50);
+    box-shadow: rgb(0,0,0, 0.5) 5px -25px 27px;
+    display: flex;
+    justify-content: center;
+  }
+  .cards-block-title {
+    font-size: 28px;
+    color: #535353;
+    font-weight: bold;
+    font-family: 'Kaisei';
+    font-style: oblique;
+  }
+  .cards-block-species {
+    margin-top: 15px;
+    background-color: #5a5a58;
+    width: 89%;
+    margin-left: 5%;
+    border-radius: 10px;   
+  }
+  .cards-block {
+    height: 500;
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    grid-template-rows: repeat(5000, 340px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    background-color: #ffd9ae;
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+  .creation-front-txt {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    gap: 20px;
+  }

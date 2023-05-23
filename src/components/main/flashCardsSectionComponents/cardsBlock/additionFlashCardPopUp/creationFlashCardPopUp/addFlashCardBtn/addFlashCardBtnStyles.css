@@ -1,0 +1,17 @@
+.add-flash-card-btn-container {
+
+}
+.add-flash-card-btn {
+    height: 80px;
+    /* width: 250px; */
+    width: 141%;
+    background-color: rgb(255 115 38);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: rgb(0,0,0,0.5) 7px 7px 7px;
+  }
+  .add-flash-card-btn:active {
+    transform: scale(1.1,1.1);
+  }

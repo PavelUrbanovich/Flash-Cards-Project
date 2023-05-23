@@ -1,0 +1,49 @@
+.creation-flash-card-pop-up__close-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    height: 7%;
+  }
+  .creation-flash-card-pop-up__close-btn {
+    font-size: 55px;
+    color: rgb(115 108 108);
+    font-weight: bold;
+  }
+  .creation-flash-card-pop-up__content {
+    display: grid;
+    
+  }
+  .content__title-container {
+    display: flex;
+    justify-content: center;
+  }
+  .content__title {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(115 108 108);
+    margin-bottom: 3%;
+  }
+  .flash-card-customization {
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 39% 14% 17%;
+    grid-template-areas: 
+          "display upend settings";
+  }
+  .flash-card-display {
+    grid-area: display;
+  }
+  .flash-card-main-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    grid-area: settings;
+  }
+  .color-subject-choise {
+    /* display: flex;
+    gap: 64%; */
+    display: grid;
+      grid-column-gap: 14%;
+      grid-template-areas: "item1 item2";
+      grid-template-columns: 120% 84%;
+  }

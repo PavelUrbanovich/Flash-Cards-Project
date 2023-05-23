@@ -1,0 +1,13 @@
+.creation-flash-card-input-btn {
+    height: 40px;
+    /* width: 120px; */
+    width: 66%;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(255 115 38);
+    box-shadow: rgb(0,0,0,0.5) 4px 4px 4px;
+  }
+  .creation-flash-card-input-btn:active {
+    transform: scale(1.1,1.1);
+  }
